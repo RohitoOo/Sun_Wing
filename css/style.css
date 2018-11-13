@@ -179,7 +179,13 @@ body {
     .filtr-item {
         width: 80%;
         min-height: 200px;
-        max-height: auto;
+        max-height: 100%;
+        transform: scale(1) translate3d(0px, 0px, 0px) !important;
+        position: unset !important;
+        margin: 0px auto 15px;
+    }
+    .filter-item {
+        height: auto !Important;
     }
 }
 

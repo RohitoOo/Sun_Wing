@@ -115,9 +115,10 @@ function setFilterTemplate(subCat, si) {
                 <div class="heading-description">
                     <h5>${d.excursionName}</h5>
                     <p>${d.excursionFullName}</p>
-                </div>
-                <div class="exc-img"><img src="http:${d.excursionImages['Img4X3'][0]}" alt="excursion"></div>
-                <p class="heading-content">${d.excursionShortDescription}</p>
+                </div>`;
+        if (d.excursionImages)
+            filter_template += `<div class="exc-img"><img src="http:${d.excursionImages['Img4X3'][0]}" alt="excursion"></div>`;
+        filter_template += `<p class="heading-content">${d.excursionShortDescription}</p>
                 <span class="read-more">[<span class="cta">Read more</span>]</span>
             </div>`;
     });
