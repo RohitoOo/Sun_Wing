@@ -74,7 +74,8 @@ function getExcursion(country = null, destination = null) {
             var allSubCats = [];
             var catIndex = ''
             data.forEach(function(d, i) {
-                //console.log(d)
+                console.log(d)
+
                 var filter_temp = '<ul class="filter-tab-wrapper">';
                 filter_temp += '<li data-filter="all"> All Excursions </li>';
                 d.subCategories.forEach(function(e, ei) {
@@ -82,7 +83,11 @@ function getExcursion(country = null, destination = null) {
                 });
                 filter_temp += '</ul>';
 
-                filter_temp += `<div class="filter-item filtr-container${i}">`
+
+
+
+
+                filter_temp += `<div class="filtr-item filtr-container${i}">`
                 d.subCategories.forEach(function(e, ei) {
                     filter_temp += setFilterTemplate(e, ei)
                 });
@@ -102,7 +107,7 @@ function getExcursion(country = null, destination = null) {
 
 function initFilters(data) {
     data.forEach(function(d, i) {
-        $('.filtr-container' + i).filterizr({});
+        $('.filtr-container' + i).filterizr({})
     });
 }
 
